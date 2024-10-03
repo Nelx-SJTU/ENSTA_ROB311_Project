@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<launch>
+
+  <!-- EXECUTION PARAMETERS -->
+  <arg name="simulation" default="true"/>
+  <arg name="robot_ip" default="147.250.35.20" />
+  <arg name="use_rviz_gui" default="true"/>
+
+  <!-- MoveIt based simulation -->
+  <group if="$(arg simulation)">
+    <include file="$(find ur5_moveit_config)/launch/demo.launch"/>
+  </group>
+  
+  <!-- Real hardware execution (do not forget to start ROS on the robot) -->
+  <group unless="$(arg simulation)">
+    <include file="$(find ur_robot_driver)/launch/ur5_bringup.launch">
+      <arg name="robot_ip" value="$(arg robot_ip)" />
+    </include>
+    
+    <include file="$(find ur5_moveit_config)/launch/moveit_planning_execution.launch"/>
+
+    <!-- Conditional launch of RViz -->
+    <group if="$(arg use_rviz_gui)">
+      <node name="RViz" pkg="rviz" type="rviz" />
+    </group>
+    
+  </group>
+
+</launch>
+
