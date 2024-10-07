@@ -5,48 +5,62 @@ import moveit_commander
 import moveit_msgs.msg
 import geometry_msgs.msg
 import shape_msgs.msg
+import yaml
+import rospkg
 
-def add_obstacle(scene):
-    # 创建障碍物
-    obstacle = moveit_msgs.msg.CollisionObject()
-    obstacle.id = "box1"
-    obstacle.header.frame_id = "base_link"  # 使用 UR5 的 base_link 作为参考坐标系
+def load_obstacles_from_yaml(yaml_file):
+    with open(yaml_file, 'r') as file:
+        obstacles_data = yaml.safe_load(file)
+    return obstacles_data
 
-    # 定义障碍物的形状和尺寸
-    box = shape_msgs.msg.SolidPrimitive()
-    box.type = shape_msgs.msg.SolidPrimitive.BOX
-    box.dimensions = [0.4, 0.4, 0.4]  # 立方体的尺寸
+def add_obstacles_from_yaml(scene, obstacles_data):
+    for obstacle_data in obstacles_data['obstacles']:
+        # Create obstacles
+        obstacle = moveit_msgs.msg.CollisionObject()
+        obstacle.id = obstacle_data['id']
+        obstacle.header.frame_id = obstacle_data['frame_id']  # 参考坐标系
 
-    # 定义障碍物的位置
-    box_pose = geometry_msgs.msg.Pose()
-    box_pose.position.x = 0.6
-    box_pose.position.y = 0.6
-    box_pose.position.z = 0.25
-    box_pose.orientation.w = 1.0
+        # Define the shapes and sizes of obstacles
+        solid_primitive = shape_msgs.msg.SolidPrimitive()
+        solid_primitive.type = shape_msgs.msg.SolidPrimitive.BOX
+        solid_primitive.dimensions = obstacle_data['dimensions']
 
-    # 将形状和位姿添加到障碍物
-    obstacle.primitives.append(box)
-    obstacle.primitive_poses.append(box_pose)
-    obstacle.operation = obstacle.ADD
+        # Define the poses of obstacles
+        pose = geometry_msgs.msg.Pose()
+        pose.position.x = obstacle_data['pose']['position']['x']
+        pose.position.y = obstacle_data['pose']['position']['y']
+        pose.position.z = obstacle_data['pose']['position']['z']
+        pose.orientation.x = obstacle_data['pose']['orientation']['x']
+        pose.orientation.y = obstacle_data['pose']['orientation']['y']
+        pose.orientation.z = obstacle_data['pose']['orientation']['z']
+        pose.orientation.w = obstacle_data['pose']['orientation']['w']
 
-    # 将障碍物添加到规划场景中
-    scene.add_object(obstacle)
+        # Add shapes and poses to obstacles lists
+        obstacle.primitives.append(solid_primitive)
+        obstacle.primitive_poses.append(pose)
+        obstacle.operation = obstacle.ADD
+
+        # Add obstacles to scenes
+        scene.add_object(obstacle)
 
 if __name__ == "__main__":
     rospy.init_node("add_obstacles_node", anonymous=True)
     scene = moveit_commander.PlanningSceneInterface()
 
-    # 等待场景初始化
+    # Wait for initialization of scene
     rospy.sleep(2)
 
-    # 添加障碍物
-    add_obstacle(scene)
+    # Load obstacles infomation from yaml
+    rospack = rospkg.RosPack()
+    package_path = rospack.get_path('ur5_move')
+    yaml_file = package_path + "/config/environments/obstacles.yaml"
+    obstacles_data = load_obstacles_from_yaml(yaml_file)
 
-    # 打印当前场景中的物体列表，验证是否成功添加
+    # Add obstacles
+    add_obstacles_from_yaml(scene, obstacles_data)
     print("Current objects in the scene:", scene.get_known_object_names())
 
-    # 等待Rviz更新障碍物的显示
+    # Wait for Rviz update of displaying obstacles
     rospy.sleep(2)
 
     rospy.spin()
-

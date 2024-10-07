@@ -3,7 +3,6 @@
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws
 catkin_make
-
 ```
 
 ```
@@ -37,6 +36,15 @@ rosrun ur5_move move_ur5_demo.py
 
 # Activate virtual env
 ```
-source robotarm/bin/activate
+source ~/robotarm/bin/activate
 ```
 
+# Load Rviz settings
+```
+rviz -d ./config/rviz/rviz_config.rviz
+```
+
+# Run the RRT planning
+```
+roslaunch ur5_move ur5_planning.launch
+```

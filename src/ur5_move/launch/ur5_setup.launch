@@ -8,6 +8,8 @@
 
   <!-- MoveIt based simulation -->
   <group if="$(arg simulation)">
+    <!-- node name="rviz" pkg="rviz" type="rviz" args="-d $(find ur5_move)/config/rviz/rviz_config.rviz" /-->
+
     <include file="$(find ur5_moveit_config)/launch/demo.launch"/>
   </group>
   

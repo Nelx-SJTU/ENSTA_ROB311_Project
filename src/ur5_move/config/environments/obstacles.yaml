@@ -1,0 +1,93 @@
+obstacles:
+  - id: "base"
+    frame_id: "base_link"
+    dimensions: [1.0, 1.0, 0.4]
+    pose:
+      position:
+        x: 0.0
+        y: -0.3
+        z: -0.2
+      orientation:
+        x: 0.0
+        y: 0.0
+        z: 0.0
+        w: 1.0
+  - id: "desk"
+    frame_id: "base_link"
+    dimensions: [2.0, 1.0, 0.9]
+    pose:
+      position:
+        x: 0.0
+        y: 0.8
+        z: 0.05
+      orientation:
+        x: 0.0
+        y: 0.0
+        z: 0.0
+        w: 1.0
+  - id: "box1"
+    frame_id: "base_link"
+    dimensions: [0.05, 0.05, 0.1]
+    pose:
+      position:
+        x: -0.3
+        y: 0.325
+        z: 0.55
+      orientation:
+        x: 0.0
+        y: 0.0
+        z: 0.0
+        w: 1.0
+  - id: "box2"
+    frame_id: "base_link"
+    dimensions: [0.05, 0.05, 0.1]
+    pose:
+      position:
+        x: -0.15
+        y: 0.325
+        z: 0.55
+      orientation:
+        x: 0.0
+        y: 0.0
+        z: 0.0
+        w: 1.0
+  - id: "box3"
+    frame_id: "base_link"
+    dimensions: [0.05, 0.05, 0.1]
+    pose:
+      position:
+        x: 0.0
+        y: 0.325
+        z: 0.55
+      orientation:
+        x: 0.0
+        y: 0.0
+        z: 0.0
+        w: 1.0
+  - id: "box4"
+    frame_id: "base_link"
+    dimensions: [0.05, 0.05, 0.1]
+    pose:
+      position:
+        x: 0.15
+        y: 0.325
+        z: 0.55
+      orientation:
+        x: 0.0
+        y: 0.0
+        z: 0.0
+        w: 1.0
+  - id: "box5"
+    frame_id: "base_link"
+    dimensions: [0.05, 0.05, 0.1]
+    pose:
+      position:
+        x: 0.3
+        y: 0.325
+        z: 0.55
+      orientation:
+        x: 0.0
+        y: 0.0
+        z: 0.0
+        w: 1.0
+
