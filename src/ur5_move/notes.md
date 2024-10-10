@@ -48,5 +48,3 @@ rviz -d ./config/rviz/rviz_config.rviz
 ```
 roslaunch ur5_move ur5_planning.launch
 ```
-
-base 100,35,72
