@@ -1,2 +1,2 @@
-ur5_move
+husky_ur5_move:husky_ur_moveit_config:ur5_move
 -DCATKIN_DEVEL_PREFIX=/home/nelsonxu/RobotArmControl/devel -DCMAKE_INSTALL_PREFIX=/home/nelsonxu/RobotArmControl/install -G Unix Makefiles

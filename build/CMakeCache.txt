@@ -449,6 +449,18 @@ gtest_hide_internal_symbols:BOOL=OFF
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;gtest;
 
+//Value Computed by CMake
+husky_ur5_move_BINARY_DIR:STATIC=/home/nelsonxu/RobotArmControl/build/husky_ur5_move
+
+//Value Computed by CMake
+husky_ur5_move_SOURCE_DIR:STATIC=/home/nelsonxu/RobotArmControl/src/husky_ur5_move
+
+//Value Computed by CMake
+husky_ur_moveit_config_BINARY_DIR:STATIC=/home/nelsonxu/RobotArmControl/build/husky_ur_moveit_config
+
+//Value Computed by CMake
+husky_ur_moveit_config_SOURCE_DIR:STATIC=/home/nelsonxu/RobotArmControl/src/husky_ur_moveit_config
+
 //Path to a library.
 lib:FILEPATH=/opt/ros/noetic/lib/librostime.so
 
@@ -463,6 +475,9 @@ roscpp_serialization_DIR:PATH=/opt/ros/noetic/share/roscpp_serialization/cmake
 
 //The directory containing a CMake configuration file for roscpp_traits.
 roscpp_traits_DIR:PATH=/opt/ros/noetic/share/roscpp_traits/cmake
+
+//The directory containing a CMake configuration file for roslaunch.
+roslaunch_DIR:PATH=/opt/ros/noetic/share/roslaunch/cmake
 
 //The directory containing a CMake configuration file for rospy.
 rospy_DIR:PATH=/opt/ros/noetic/share/rospy/cmake
@@ -627,7 +642,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

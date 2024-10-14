@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<launch>
+  <!-- EXECUTION PARAMETERS -->
+  <arg name="simulation" default="true"/>
+
+  <!-- Launch the MoveIt configuration for UR5, which will automatically launch Rviz -->
+  <include file="$(find ur5_move)/launch/ur5_setup.launch">
+    <arg name="simulation" value="$(arg simulation)"/>
+  </include>
+  
+  <!-- Obstacle import node -->
+  <node name="add_obstacles" pkg="ur5_move" type="add_obstacles.py" output="screen" />
+
+  <!-- Path planning node -->
+  <node name="move_ur5_rrt" pkg="ur5_move" type="move_ur5_rrt.py" output="screen" />
+
+</launch>
+

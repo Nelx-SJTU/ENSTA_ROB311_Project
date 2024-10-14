@@ -131,6 +131,8 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/nelsonxu/RobotArmControl/build/gtest/cmake_install.cmake")
+  include("/home/nelsonxu/RobotArmControl/build/husky_ur5_move/cmake_install.cmake")
+  include("/home/nelsonxu/RobotArmControl/build/husky_ur_moveit_config/cmake_install.cmake")
   include("/home/nelsonxu/RobotArmControl/build/ur5_move/cmake_install.cmake")
 
 endif()
