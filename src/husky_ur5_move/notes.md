@@ -19,3 +19,21 @@ go to husky_ur5_move/launch/planning_context.launch, delete ".py" (change to (fi
 source Full/Path/To/husky_ur_description/scripts/setup_husky_ur5_envar 
 https://github.com/husky/husky_manipulation/issues/9
 
+
+# Initial state
+```
+<group_state name="stow" group="manipulator">
+<joint name="ur_arm_elbow_joint" value="-2.6826" />
+<joint name="ur_arm_shoulder_lift_joint" value="-0.4589" />
+<joint name="ur_arm_shoulder_pan_joint" value="0" />
+<joint name="ur_arm_wrist_1_joint" value="-1.57079" />
+<joint name="ur_arm_wrist_2_joint" value="1.57" />
+<joint name="ur_arm_wrist_3_joint" value="0" />
+</group_state>
+```
+
+# Collision detection
+in src/husky_ur5_move/config/husky.srdf, add
+```
+<disable_collisions link1="ur_arm_shoulder_link" link2="ur_arm_base_link_inertia" reason="Never" />
+```
