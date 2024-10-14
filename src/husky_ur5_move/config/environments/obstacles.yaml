@@ -1,12 +1,64 @@
 obstacles:
-  - id: "base"
+  # - id: "base"
+  #   frame_id: "base_link"
+  #   dimensions: [1.0, 0.72, 0.35]
+  #   pose:
+  #     position:
+  #       x: 0.0
+  #       y: 0.0
+  #       z: 0.025
+  #     orientation:
+  #       x: 0.0
+  #       y: 0.0
+  #       z: 0.0
+  #       w: 1.0
+  - id: "husky_cage_front"
     frame_id: "base_link"
-    dimensions: [0.72, 1.0, 0.35]
+    dimensions: [0.01, 0.72, 0.3]
+    pose:
+      position:
+        x: 0.55
+        y: 0.0
+        z: 0.0
+      orientation:
+        x: 0.0
+        y: 0.0
+        z: 0.0
+        w: 1.0
+  - id: "husky_cage_back"
+    frame_id: "base_link"
+    dimensions: [0.01, 0.72, 0.3]
+    pose:
+      position:
+        x: -0.55
+        y: 0.0
+        z: 0.0
+      orientation:
+        x: 0.0
+        y: 0.0
+        z: 0.0
+        w: 1.0
+  - id: "husky_cage_left"
+    frame_id: "base_link"
+    dimensions: [1.0, 0.01, 0.3]
     pose:
       position:
         x: 0.0
-        y: -0.35
-        z: -0.175
+        y: 0.4
+        z: 0.0
+      orientation:
+        x: 0.0
+        y: 0.0
+        z: 0.0
+        w: 1.0
+  - id: "husky_cage_right"
+    frame_id: "base_link"
+    dimensions: [1.0, 0.01, 0.3]
+    pose:
+      position:
+        x: 0.0
+        y: -0.4
+        z: 0.0
       orientation:
         x: 0.0
         y: 0.0
@@ -14,12 +66,12 @@ obstacles:
         w: 1.0
   - id: "control_box"
     frame_id: "base_link"
-    dimensions: [0.52, 0.32, 0.4]
+    dimensions: [0.32, 0.52, 0.4]
     pose:
       position:
-        x: 0.0
-        y: -0.64
-        z: 0.2
+        x: -0.29
+        y: 0.0
+        z: 0.45
       orientation:
         x: 0.0
         y: 0.0
@@ -27,12 +79,12 @@ obstacles:
         w: 1.0
   - id: "desk"
     frame_id: "base_link"
-    dimensions: [1.19, 0.75, 0.735]
+    dimensions: [0.75, 1.19, 0.735]
     pose:
       position:
-        x: 0.0
-        y: 0.875
-        z: 0.0175
+        x: 1.225
+        y: 0.0
+        z: 0.2175
       orientation:
         x: 0.0
         y: 0.0
@@ -43,9 +95,9 @@ obstacles:
     dimensions: [0.08, 0.08, 0.2]
     pose:
       position:
-        x: -0.2
-        y: 0.64
-        z: 0.485
+        x: 0.99
+        y: -0.2
+        z: 0.685
       orientation:
         x: 0.0
         y: 0.0
@@ -56,9 +108,9 @@ obstacles:
     dimensions: [0.08, 0.08, 0.25]
     pose:
       position:
-        x: -0.067
-        y: 0.64
-        z: 0.51
+        x: 0.99
+        y: -0.067
+        z: 0.71
       orientation:
         x: 0.0
         y: 0.0
@@ -69,9 +121,9 @@ obstacles:
     dimensions: [0.08, 0.08, 0.2]
     pose:
       position:
-        x: 0.067
-        y: 0.64
-        z: 0.485
+        x: 0.99
+        y: 0.067
+        z: 0.685
       orientation:
         x: 0.0
         y: 0.0
@@ -82,9 +134,9 @@ obstacles:
     dimensions: [0.08, 0.08, 0.2]
     pose:
       position:
-        x: 0.2
-        y: 0.64
-        z: 0.485
+        x: 0.99
+        y: 0.2
+        z: 0.685
       orientation:
         x: 0.0
         y: 0.0
@@ -92,12 +144,12 @@ obstacles:
         w: 1.0
   - id: "box5"
     frame_id: "base_link"
-    dimensions: [0.19, 0.35, 0.12]
+    dimensions: [0.35, 0.19, 0.14]
     pose:
       position:
-        x: 0.41
-        y: 0.675
-        z: 0.481
+        x: 1.025
+        y: -0.41
+        z: 0.66
       orientation:
         x: 0.0
         y: 0.0

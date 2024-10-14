@@ -80,16 +80,6 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -135,6 +125,16 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # The main all target
 all: cmake_check_build_system
 	cd /home/nelsonxu/RobotArmControl/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/nelsonxu/RobotArmControl/build/CMakeFiles /home/nelsonxu/RobotArmControl/build/husky_ur5_move/CMakeFiles/progress.marks
@@ -168,21 +168,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-husky_ur5_move/CMakeFiles/_catkin_empty_exported_target.dir/rule:
-	cd /home/nelsonxu/RobotArmControl/build && $(MAKE) -f CMakeFiles/Makefile2 husky_ur5_move/CMakeFiles/_catkin_empty_exported_target.dir/rule
-.PHONY : husky_ur5_move/CMakeFiles/_catkin_empty_exported_target.dir/rule
-
-# Convenience name for target.
-_catkin_empty_exported_target: husky_ur5_move/CMakeFiles/_catkin_empty_exported_target.dir/rule
-
-.PHONY : _catkin_empty_exported_target
-
-# fast build rule for target.
-_catkin_empty_exported_target/fast:
-	cd /home/nelsonxu/RobotArmControl/build && $(MAKE) -f husky_ur5_move/CMakeFiles/_catkin_empty_exported_target.dir/build.make husky_ur5_move/CMakeFiles/_catkin_empty_exported_target.dir/build
-.PHONY : _catkin_empty_exported_target/fast
-
-# Convenience name for target.
 husky_ur5_move/CMakeFiles/_run_tests_husky_ur5_move_roslaunch-check.dir/rule:
 	cd /home/nelsonxu/RobotArmControl/build && $(MAKE) -f CMakeFiles/Makefile2 husky_ur5_move/CMakeFiles/_run_tests_husky_ur5_move_roslaunch-check.dir/rule
 .PHONY : husky_ur5_move/CMakeFiles/_run_tests_husky_ur5_move_roslaunch-check.dir/rule
@@ -196,21 +181,6 @@ _run_tests_husky_ur5_move_roslaunch-check: husky_ur5_move/CMakeFiles/_run_tests_
 _run_tests_husky_ur5_move_roslaunch-check/fast:
 	cd /home/nelsonxu/RobotArmControl/build && $(MAKE) -f husky_ur5_move/CMakeFiles/_run_tests_husky_ur5_move_roslaunch-check.dir/build.make husky_ur5_move/CMakeFiles/_run_tests_husky_ur5_move_roslaunch-check.dir/build
 .PHONY : _run_tests_husky_ur5_move_roslaunch-check/fast
-
-# Convenience name for target.
-husky_ur5_move/CMakeFiles/_run_tests_husky_ur5_move.dir/rule:
-	cd /home/nelsonxu/RobotArmControl/build && $(MAKE) -f CMakeFiles/Makefile2 husky_ur5_move/CMakeFiles/_run_tests_husky_ur5_move.dir/rule
-.PHONY : husky_ur5_move/CMakeFiles/_run_tests_husky_ur5_move.dir/rule
-
-# Convenience name for target.
-_run_tests_husky_ur5_move: husky_ur5_move/CMakeFiles/_run_tests_husky_ur5_move.dir/rule
-
-.PHONY : _run_tests_husky_ur5_move
-
-# fast build rule for target.
-_run_tests_husky_ur5_move/fast:
-	cd /home/nelsonxu/RobotArmControl/build && $(MAKE) -f husky_ur5_move/CMakeFiles/_run_tests_husky_ur5_move.dir/build.make husky_ur5_move/CMakeFiles/_run_tests_husky_ur5_move.dir/build
-.PHONY : _run_tests_husky_ur5_move/fast
 
 # Convenience name for target.
 husky_ur5_move/CMakeFiles/run_tests_husky_ur5_move_roslaunch-check_launch_move_group.launch.dir/rule:
@@ -317,6 +287,21 @@ run_tests_husky_ur5_move_roslaunch-check_launch_husky_ur_moveit_planning_executi
 	cd /home/nelsonxu/RobotArmControl/build && $(MAKE) -f husky_ur5_move/CMakeFiles/run_tests_husky_ur5_move_roslaunch-check_launch_husky_ur_moveit_planning_execution.launch.dir/build.make husky_ur5_move/CMakeFiles/run_tests_husky_ur5_move_roslaunch-check_launch_husky_ur_moveit_planning_execution.launch.dir/build
 .PHONY : run_tests_husky_ur5_move_roslaunch-check_launch_husky_ur_moveit_planning_execution.launch/fast
 
+# Convenience name for target.
+husky_ur5_move/CMakeFiles/_run_tests_husky_ur5_move.dir/rule:
+	cd /home/nelsonxu/RobotArmControl/build && $(MAKE) -f CMakeFiles/Makefile2 husky_ur5_move/CMakeFiles/_run_tests_husky_ur5_move.dir/rule
+.PHONY : husky_ur5_move/CMakeFiles/_run_tests_husky_ur5_move.dir/rule
+
+# Convenience name for target.
+_run_tests_husky_ur5_move: husky_ur5_move/CMakeFiles/_run_tests_husky_ur5_move.dir/rule
+
+.PHONY : _run_tests_husky_ur5_move
+
+# fast build rule for target.
+_run_tests_husky_ur5_move/fast:
+	cd /home/nelsonxu/RobotArmControl/build && $(MAKE) -f husky_ur5_move/CMakeFiles/_run_tests_husky_ur5_move.dir/build.make husky_ur5_move/CMakeFiles/_run_tests_husky_ur5_move.dir/build
+.PHONY : _run_tests_husky_ur5_move/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -325,10 +310,7 @@ help:
 	@echo "... depend"
 	@echo "... install/strip"
 	@echo "... install"
-	@echo "... _catkin_empty_exported_target"
 	@echo "... _run_tests_husky_ur5_move_roslaunch-check"
-	@echo "... list_install_components"
-	@echo "... _run_tests_husky_ur5_move"
 	@echo "... test"
 	@echo "... run_tests_husky_ur5_move_roslaunch-check_launch_move_group.launch"
 	@echo "... _run_tests_husky_ur5_move_roslaunch-check_launch_move_group.launch"
@@ -340,6 +322,8 @@ help:
 	@echo "... run_tests_husky_ur5_move_roslaunch-check_launch_husky_ur_moveit_planning_execution.launch"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... _run_tests_husky_ur5_move"
+	@echo "... list_install_components"
 .PHONY : help
 
 

@@ -84,3 +84,18 @@ Target poses for the UR5 arm are set in the `config/poses/grab_poses.yaml` file.
 
 
 
+
+
+
+
+
+
+
+
+
+# Husky-ur5 config
+```
+source ~/catkin_ws/src/husky_manipulation/setup_husky_arm.sh
+
+```
+

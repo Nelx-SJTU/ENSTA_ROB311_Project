@@ -12,7 +12,7 @@
   <group if="$(arg simulation)">
     <!-- node name="rviz" pkg="rviz" type="rviz" args="-d $(find ur5_move)/config/rviz/rviz_config.rviz" /-->
 
-    <include file="$(find ur5_moveit_config)/launch/demo.launch"/>
+    <include file="$(find husky_ur_moveit_config)/launch/demo.launch"/>
   </group>
 
   <!-- Real hardware execution (do not forget to start ROS on the robot) -->
@@ -21,7 +21,7 @@
       <arg name="robot_ip" value="$(arg robot_ip)" />
     </include-->
     
-    <include file="$(find ur5_moveit_config)/launch/moveit_planning_execution.launch"/>
+    <include file="$(find husky_ur_moveit_config)/launch/husky_ur_moveit_planning_execution.launch"/>
 
     <!-- Conditional launch of RViz -->
     <group if="$(arg use_rviz_gui)">

@@ -97,7 +97,7 @@ if __name__ == '__main__':
 
     # Read target poses
     rospack = rospkg.RosPack()
-    package_path = rospack.get_path('ur5_move')  # Replace 'your_package_name' with your package name
+    package_path = rospack.get_path('husky_ur5_move')  # Replace 'your_package_name' with your package name
     yaml_file = package_path + "/config/poses/grab_poses.yaml"  # Assuming YAML file is located in the config directory of the ROS package
     target_poses = read_poses_from_yaml(yaml_file)
 

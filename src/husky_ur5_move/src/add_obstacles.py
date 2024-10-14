@@ -52,7 +52,7 @@ if __name__ == "__main__":
 
     # Load obstacles infomation from yaml
     rospack = rospkg.RosPack()
-    package_path = rospack.get_path('ur5_move')
+    package_path = rospack.get_path('husky_ur5_move')
     yaml_file = package_path + "/config/environments/obstacles.yaml"
     obstacles_data = load_obstacles_from_yaml(yaml_file)
 
