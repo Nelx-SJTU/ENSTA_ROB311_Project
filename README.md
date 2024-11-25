@@ -25,6 +25,13 @@ git clone https://github.com/ros-industrial/universal_robot.git
   - `yaml`
   - `tf-conversions`
   - `spacy` (tested with version 2.2.3)
+  - `SpeechRecognition`
+
+To install SpeechRecognition package:
+
+```bash
+pip install SpeechRecognition
+```
 
 We use the NLP model `en_core_web_sm`, to install it:
 ```bash
