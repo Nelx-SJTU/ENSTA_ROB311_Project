@@ -34,6 +34,7 @@ python -m spacy download en_core_web_sm
 Ensure these are installed in your ROS workspace.
 
 - **Support for microphone**
+
 Install all the necessary packages:
 ```bash
 sudo apt install -y alsa-utils alsa-oss libasound2 libasound2-dev
@@ -41,6 +42,7 @@ python2 -m pip install pyaudio===0.2.11
 ```
 
 - **Support for Docker**
+
 If you run our project in Docker, ensure that you run the following two commands:
 
 To enable the rviz, run this command in your local terminal:
