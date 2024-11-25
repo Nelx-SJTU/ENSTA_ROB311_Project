@@ -1,8 +1,8 @@
-# Install script for directory: /home/nelsonxu/RobotArmControl/src/ur5_move
+# Install script for directory: /catkin_ws/ENSTA_ROB311_Project/src/ur5_move
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/nelsonxu/RobotArmControl/install")
+  set(CMAKE_INSTALL_PREFIX "/catkin_ws/ENSTA_ROB311_Project/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,29 +38,29 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/nelsonxu/RobotArmControl/build/ur5_move/catkin_generated/installspace/ur5_move.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/catkin_ws/ENSTA_ROB311_Project/build/ur5_move/catkin_generated/installspace/ur5_move.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur5_move/cmake" TYPE FILE FILES
-    "/home/nelsonxu/RobotArmControl/build/ur5_move/catkin_generated/installspace/ur5_moveConfig.cmake"
-    "/home/nelsonxu/RobotArmControl/build/ur5_move/catkin_generated/installspace/ur5_moveConfig-version.cmake"
+    "/catkin_ws/ENSTA_ROB311_Project/build/ur5_move/catkin_generated/installspace/ur5_moveConfig.cmake"
+    "/catkin_ws/ENSTA_ROB311_Project/build/ur5_move/catkin_generated/installspace/ur5_moveConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur5_move" TYPE FILE FILES "/home/nelsonxu/RobotArmControl/src/ur5_move/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur5_move" TYPE FILE FILES "/catkin_ws/ENSTA_ROB311_Project/src/ur5_move/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ur5_move" TYPE PROGRAM FILES "/home/nelsonxu/RobotArmControl/build/ur5_move/catkin_generated/installspace/move_ur5_demo.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ur5_move" TYPE PROGRAM FILES "/catkin_ws/ENSTA_ROB311_Project/build/ur5_move/catkin_generated/installspace/move_ur5_demo.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ur5_move" TYPE PROGRAM FILES "/home/nelsonxu/RobotArmControl/build/ur5_move/catkin_generated/installspace/add_obstacles.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ur5_move" TYPE PROGRAM FILES "/catkin_ws/ENSTA_ROB311_Project/build/ur5_move/catkin_generated/installspace/add_obstacles.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ur5_move" TYPE PROGRAM FILES "/home/nelsonxu/RobotArmControl/build/ur5_move/catkin_generated/installspace/move_ur5_rrt.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ur5_move" TYPE PROGRAM FILES "/catkin_ws/ENSTA_ROB311_Project/build/ur5_move/catkin_generated/installspace/move_ur5_rrt.py")
 endif()
 

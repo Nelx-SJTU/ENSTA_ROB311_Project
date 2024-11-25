@@ -1,8 +1,8 @@
-# Install script for directory: /home/nelsonxu/RobotArmControl/src/husky_ur5_move
+# Install script for directory: /catkin_ws/ENSTA_ROB311_Project/src/husky_ur5_move
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/nelsonxu/RobotArmControl/install")
+  set(CMAKE_INSTALL_PREFIX "/catkin_ws/ENSTA_ROB311_Project/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,29 +38,29 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/nelsonxu/RobotArmControl/build/husky_ur5_move/catkin_generated/installspace/husky_ur5_move.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/catkin_ws/ENSTA_ROB311_Project/build/husky_ur5_move/catkin_generated/installspace/husky_ur5_move.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/husky_ur5_move/cmake" TYPE FILE FILES
-    "/home/nelsonxu/RobotArmControl/build/husky_ur5_move/catkin_generated/installspace/husky_ur5_moveConfig.cmake"
-    "/home/nelsonxu/RobotArmControl/build/husky_ur5_move/catkin_generated/installspace/husky_ur5_moveConfig-version.cmake"
+    "/catkin_ws/ENSTA_ROB311_Project/build/husky_ur5_move/catkin_generated/installspace/husky_ur5_moveConfig.cmake"
+    "/catkin_ws/ENSTA_ROB311_Project/build/husky_ur5_move/catkin_generated/installspace/husky_ur5_moveConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/husky_ur5_move" TYPE FILE FILES "/home/nelsonxu/RobotArmControl/src/husky_ur5_move/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/husky_ur5_move" TYPE FILE FILES "/catkin_ws/ENSTA_ROB311_Project/src/husky_ur5_move/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/husky_ur5_move" TYPE DIRECTORY FILES "/home/nelsonxu/RobotArmControl/src/husky_ur5_move/launch" REGEX "/setup\\_assistant\\.launch$" EXCLUDE)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/husky_ur5_move" TYPE DIRECTORY FILES "/catkin_ws/ENSTA_ROB311_Project/src/husky_ur5_move/launch" REGEX "/setup\\_assistant\\.launch$" EXCLUDE)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/husky_ur5_move" TYPE DIRECTORY FILES "/home/nelsonxu/RobotArmControl/src/husky_ur5_move/config")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/husky_ur5_move" TYPE DIRECTORY FILES "/catkin_ws/ENSTA_ROB311_Project/src/husky_ur5_move/config")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/husky_ur5_move" TYPE PROGRAM FILES "/home/nelsonxu/RobotArmControl/src/husky_ur5_move/scripts/customize_moveit.sh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/husky_ur5_move" TYPE PROGRAM FILES "/catkin_ws/ENSTA_ROB311_Project/src/husky_ur5_move/scripts/customize_moveit.sh")
 endif()
 

@@ -1,5 +1,5 @@
-#!/usr/bin/env python3
-
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
 import rospy
 import moveit_commander
 import moveit_msgs.msg
@@ -45,6 +45,7 @@ def add_obstacles_from_yaml(scene, obstacles_data):
 
 if __name__ == "__main__":
     rospy.init_node("add_obstacles_node", anonymous=True)
+    print("Add obstacles to the scene")
     scene = moveit_commander.PlanningSceneInterface()
 
     # Wait for initialization of scene

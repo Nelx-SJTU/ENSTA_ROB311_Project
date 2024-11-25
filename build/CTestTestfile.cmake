@@ -1,23 +1,23 @@
 # CMake generated Testfile for 
-# Source directory: /home/nelsonxu/RobotArmControl/src
-# Build directory: /home/nelsonxu/RobotArmControl/build
+# Source directory: /catkin_ws/ENSTA_ROB311_Project/src
+# Build directory: /catkin_ws/ENSTA_ROB311_Project/build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
-subdirs("husky_manipulation/husky_franka_description")
-subdirs("husky_manipulation/husky_franka_moveit_config")
-subdirs("husky_manipulation/husky_kinova_description")
-subdirs("husky_manipulation/husky_manipulation")
-subdirs("husky_manipulation/husky_ur_description")
-subdirs("husky_manipulation/husky_dual_ur_moveit_config")
-subdirs("husky_manipulation/husky_dual_ur_robotiq_2f_85_moveit_config")
-subdirs("husky_manipulation/husky_kinova_bringup")
+subdirs("universal_robot/universal_robots")
+subdirs("command_parser")
 subdirs("husky_ur5_move")
-subdirs("husky_manipulation/husky_ur_bringup")
-subdirs("husky_manipulation/husky_ur_moveit_config")
-subdirs("husky_manipulation/husky_ur_robotiq_2f_85_moveit_config")
+subdirs("universal_robot/ur10_moveit_config")
+subdirs("universal_robot/ur10e_moveit_config")
+subdirs("universal_robot/ur16e_moveit_config")
+subdirs("universal_robot/ur20_moveit_config")
+subdirs("universal_robot/ur30_moveit_config")
+subdirs("universal_robot/ur3_moveit_config")
+subdirs("universal_robot/ur3e_moveit_config")
+subdirs("universal_robot/ur5_moveit_config")
+subdirs("universal_robot/ur5e_moveit_config")
+subdirs("universal_robot/ur_description")
+subdirs("universal_robot/ur_gazebo")
+subdirs("universal_robot/ur_kinematics")
 subdirs("ur5_move")
-subdirs("husky_manipulation/husky_dual_gen3_moveit_config")
-subdirs("husky_manipulation/husky_gen3_moveit_config")
-subdirs("husky_manipulation/husky_franka_bringup")

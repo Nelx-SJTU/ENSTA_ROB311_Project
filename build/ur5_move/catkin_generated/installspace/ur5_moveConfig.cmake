@@ -67,14 +67,14 @@ set(ur5_move_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(ur5_move_SOURCE_PREFIX /home/nelsonxu/RobotArmControl/src/ur5_move)
-  set(ur5_move_DEVEL_PREFIX /home/nelsonxu/RobotArmControl/devel)
+  set(ur5_move_SOURCE_PREFIX /catkin_ws/ENSTA_ROB311_Project/src/ur5_move)
+  set(ur5_move_DEVEL_PREFIX /catkin_ws/ENSTA_ROB311_Project/devel)
   set(ur5_move_INSTALL_PREFIX "")
   set(ur5_move_PREFIX ${ur5_move_DEVEL_PREFIX})
 else()
   set(ur5_move_SOURCE_PREFIX "")
   set(ur5_move_DEVEL_PREFIX "")
-  set(ur5_move_INSTALL_PREFIX /home/nelsonxu/RobotArmControl/install)
+  set(ur5_move_INSTALL_PREFIX /catkin_ws/ENSTA_ROB311_Project/install)
   set(ur5_move_PREFIX ${ur5_move_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/nelsonxu/RobotArmControl/install/lib;/home/nelsonxu/RobotArmControl/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /catkin_ws/ENSTA_ROB311_Project/install/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -211,7 +211,7 @@ foreach(depend ${depends})
   _unpack_libraries_with_build_configuration(ur5_move_LIBRARIES ${ur5_move_LIBRARIES})
 
   _list_append_unique(ur5_move_LIBRARY_DIRS ${${ur5_move_dep}_LIBRARY_DIRS})
-  _list_append_deduplicate(ur5_move_EXPORTED_TARGETS ${${ur5_move_dep}_EXPORTED_TARGETS})
+  list(APPEND ur5_move_EXPORTED_TARGETS ${${ur5_move_dep}_EXPORTED_TARGETS})
 endforeach()
 
 set(pkg_cfg_extras "")

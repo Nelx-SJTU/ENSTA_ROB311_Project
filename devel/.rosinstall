@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/nelsonxu/RobotArmControl/devel/setup.sh
+    local-name: /catkin_ws/ENSTA_ROB311_Project/devel/setup.sh

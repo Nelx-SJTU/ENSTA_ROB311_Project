@@ -1,4 +1,4 @@
-prefix=/home/nelsonxu/RobotArmControl/install
+prefix=/catkin_ws/ENSTA_ROB311_Project/install
 
 Name: husky_ur5_move
 Description: Description of husky_ur5_move

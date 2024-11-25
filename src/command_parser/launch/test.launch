@@ -1,0 +1,17 @@
+<launch>
+    <!-- Start the voice recognition node -->
+    <node 
+        pkg="command_parser" 
+        type="voice_recognition.py" 
+        name="voice_recognition_node" 
+        output="screen">
+    </node>
+
+    <!-- Start the command parser node -->
+    <node 
+        pkg="command_parser" 
+        type="command_extraction.py" 
+        name="command_parser_node" 
+        output="screen">
+    </node>
+</launch>

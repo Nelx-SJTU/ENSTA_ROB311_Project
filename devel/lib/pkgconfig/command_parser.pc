@@ -1,0 +1,8 @@
+prefix=/catkin_ws/ENSTA_ROB311_Project/devel
+
+Name: command_parser
+Description: Description of command_parser
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

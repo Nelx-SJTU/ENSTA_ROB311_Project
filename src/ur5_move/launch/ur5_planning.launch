@@ -15,4 +15,3 @@
   <node name="move_ur5_rrt" pkg="ur5_move" type="move_ur5_rrt.py" output="screen" />
 
 </launch>
-
