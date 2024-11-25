@@ -1,8 +1,0 @@
-prefix=/catkin_ws/ENSTA_ROB311_Project/devel
-
-Name: husky_ur5_move
-Description: Description of husky_ur5_move
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

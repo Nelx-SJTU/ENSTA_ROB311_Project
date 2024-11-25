@@ -1,8 +1,0 @@
-prefix=/catkin_ws/ENSTA_ROB311_Project/install
-
-Name: command_parser
-Description: Description of command_parser
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
