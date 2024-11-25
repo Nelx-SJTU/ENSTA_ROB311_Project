@@ -12,21 +12,53 @@ This project provides a MoveIt-based motion planning setup for the UR5 robotic a
 ## Prerequisites
 
 ### Dependencies:
-- **ROS**: Ensure you have ROS installed. This package assumes the use of ROS with MoveIt for motion planning.
-- **MoveIt**: The package uses MoveIt for robotic arm control and path planning.
+- **ROS**: Ensure you have ROS installed. This package assumes the use of ROS with MoveIt for motion planning. The whole project is tested with `ROS Melodic`.
+- **MoveIt**
+  - `moveit`
+  - `ur5_moveit_config`
+
+To install `moveit`:
+```bash
+sudo apt install ros-melodic-moveit
+```
+To install `ur5_moveit_config`:
+```bash
+cd /catkin_ws/src
+git clone https://github.com/ros-industrial/universal_robot.git
+```
+
 - **Python**: Python is used for scripting. Required Python packages include:
   - `rospy`
-  - `moveit_commander`
   - `yaml`
   - `tf.transformations`
 
 Ensure these are installed in your ROS workspace.
 
+- **Support for microphone**
+Install all the necessary packages:
+```bash
+sudo apt install -y alsa-utils alsa-oss libasound2 libasound2-dev
+python2 -m pip install pyaudio===0.2.11
+```
+
+- **Support for Docker**
+If you run our project in Docker, ensure that you run the following two commands:
+
+To enable the rviz, run this command in your local terminal:
+```bash
+xhost +
+``` 
+To enable audio support in your container, add to your `docker-compose.yml`:
+```bash
+devices:
+  - "/dev/snd:/dev/snd"
+```
+Add the 
 ## Installation
 
 1. Clone this repository into your ROS workspace:
    ```bash
-   cd ~/catkin_ws/src
+   cd ~/catkin_ws
    git clone https://github.com/Nelx-SJTU/ENSTA_ROB311_Project.git
    ```
 
@@ -40,6 +72,17 @@ Ensure these are installed in your ROS workspace.
    ```bash
    source devel/setup.bash
    ```
+## Connection with UR5
+The model of robot arm is UR5, so make sure the cable of UR5 arm is connected directly to your computer (instead of Husky). To connect to robot Arm UR5:
+1. Install the driver.
+```bash
+sudo apt install ros-melodic-ur-robot-driver ros-melodic-ur-calibration
+```
+2. Load the external_control on the control panel of UR5.
+3. Run the bring_up file. Replace the robot_ip of your actual robot.
+```bash
+roslaunch ur_robot_driver ur5_bringup.launch robot_ip:=192.168.131.40
+```
 
 ## File Descriptions
 
