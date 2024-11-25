@@ -157,3 +157,7 @@ To ensure accurate recognition and processing of voice commands, users must util
    This command instructs the system to relocate the *container* to a position immediately to the right of the *book*. 
 
 These guidelines are essential for ensuring accurate and efficient interaction with the UR5 robotic manipulator in the specified environment configuration.
+
+## Image detection 
+
+The image detection algorithm is based on the ArUco marker tools from the OpenCV2 library. The x and y central positions of the codes are identified in the cartesian plane and associated with a type of identificator, which allows mapping for the objects' coordinates.
