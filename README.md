@@ -118,6 +118,7 @@ roslaunch ur_robot_driver ur5_bringup.launch robot_ip:=192.168.131.40
    roslaunch ur5_move ur5_planning.launch
    ```
    This will initialize the environment, load obstacles, and start the RRT-Connect planning. This program waits for the publish of rostopic `task_name`, which is sent in the NLP part. After receiving the rostopic, it will start to move the objects.
+   This command has 1 input `simulation` and the default vaule is `true`. If `simulation:=true`, it will run in simulation mode in RVIZ. If `simulation:=false`, it will control the robot to move and also visualize in RVIZ.
 
 ### Launch the Command parser (voice recognition module)
 To give your command to the robot arm, you should run the launch file of `command_parser` package to enable the voice recognition node and the NLP node:
